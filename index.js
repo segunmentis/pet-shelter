@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 let port = process.env.PORT || 3000;
 
 const datas = require("./data.json");
+
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.send(datas);
