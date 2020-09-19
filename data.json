@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Charlie",
+        "type": "Dog",
+        "breed": "Maltes",
+        "location": "Saskatoon, SK",
+        "latitude": "52.146973° N",
+        "longitude": "-106.647034° W"
+    },
+    {
+        "id": 2,
+        "name": "Molly",
+        "type": "Dog",
+        "breed": "Poodle",
+        "location": "Regina, SK",
+        "latitude": "50.4452° N",
+        "longitude": "104.6189° W"
+    },
+    {
+        "id": 3,
+        "name": "Oliver",
+        "type": "Cat",
+        "breed": "Birman",
+        "location": "Ottawa, ON",
+        "latitude": "45.4215° N",
+        "longitude": "75.6972° W"
+    },
+    {
+        "id": 4,
+        "name": "Max",
+        "type": "Dog",
+        "breed": "Labrador Retriever",
+        "location": "Boston, MA",
+        "latitude": "42.3601° N",
+        "longitude": "71.0589° W"
+    },
+    {
+        "id": 5,
+        "name": "Chloe",
+        "type": "Cat",
+        "breed": "Siamese",
+        "location": "Toronto, ON",
+        "latitude": "43.6532° N",
+        "longitude": "79.3832° W"
+    }
+]
