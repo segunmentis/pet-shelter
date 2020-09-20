@@ -6,11 +6,11 @@
      host: dbConfig.HOST,
      user: dbConfig.USER,
      password: dbConfig.PASSWORD,
-     database: dbConfig.DB
+     database: dbConfig.DB,
  });
 
  //open MySql connection
- conn.connect(error => {
+ conn.connect((error) => {
      if(error) throw error;
      console.log("Connected");
  });

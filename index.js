@@ -1,21 +1,13 @@
 const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
-let port = process.env.PORT || 3000;
+const app = express();
 
-const datas = require("./data.json");
+let port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-    res.send(datas);
-});
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/pet/:id", (req, res) => {
-    const pets = datas.find(p => p.id === parseInt(req.params.id));
-    if(!pets) res.status(404).send("Data not found");
-    res.send(pets);
-});
-
+require("./routes/pet.routes")(app);
 
 app.listen(port);
