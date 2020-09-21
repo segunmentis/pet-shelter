@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Segun Adeleye",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "express-validator": "^6.6.1",
     "mysql": "^2.18.1"
   },
   "engines": {
     "node": "12.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
