@@ -1,16 +1,20 @@
 //Include node dependencies
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
-const app = express();
+const app = express()
 
-//Define port 
-let port = process.env.PORT || 3000;
+//Define port
+let port = process.env.PORT || 3000
 
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }))
 
-require("./routes/pet.routes")(app);
+app.use(cors())
 
-app.listen(port);
+require('./routes/pet.routes')(app)
+require('./routes/type.routes')(app)
+
+app.listen(port)
