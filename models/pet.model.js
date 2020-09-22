@@ -6,7 +6,6 @@ class Pet {
         this.name = pet.name
         this.type = pet.type
         this.breed = pet.breed
-        this.location = pet.location
         this.latitude = pet.latitude
         this.longitude = pet.longitude
     }

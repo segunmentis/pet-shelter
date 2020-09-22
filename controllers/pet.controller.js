@@ -115,7 +115,6 @@ exports.validate = (method) => {
                 body('name', 'Name is required').notEmpty(),
                 body('type', 'Pet type is required').notEmpty(),
                 body('breed', 'Breed is required').notEmpty(),
-                body('location', 'Location is required').notEmpty(),
                 body('latitude', 'Latitude is required')
                     .notEmpty()
                     .isDecimal()
@@ -146,7 +145,6 @@ exports.validate = (method) => {
                         }
                     })
                     .withMessage('Breed already exists'),
-                body('location', 'Location is required').notEmpty(),
                 body('latitude', 'Latitude is required')
                     .notEmpty()
                     .isDecimal()
