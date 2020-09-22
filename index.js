@@ -16,5 +16,6 @@ app.use(cors())
 
 require('./routes/pet.routes')(app)
 require('./routes/type.routes')(app)
+require('./routes/breed.routes')(app)
 
 app.listen(port)
