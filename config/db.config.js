@@ -1,6 +1,6 @@
 module.exports = {
-    HOST: 'us-cdbr-east-02.cleardb.com',
-    USER: 'bf7c434e4f1a4e',
-    PASSWORD: 'e4e03d29',
-    DB: 'heroku_ee64ea50f81fb96',
+    HOST: 'nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    USER: 'qpa298x2my3bd1mi',
+    PASSWORD: 'e7gx75fni7db766s',
+    DB: 'r49iu1vcf0kdyl2n',
 }
