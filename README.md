@@ -12,12 +12,6 @@ npm install
 ```
 npm start
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
 ### Compiles and run test
 ```
 npm test
