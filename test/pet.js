@@ -12,7 +12,7 @@ describe('Pets', () => {
      * Test the /GET route
      */
     describe('/GET pet/:index/:limit', () => {
-        it('it should Get pets using index and limit', (done) => {
+        it('should Get pets using index and limit', (done) => {
             const offset = 2
             const limit = 5
             chai.request(app)
@@ -21,13 +21,16 @@ describe('Pets', () => {
                     res.should.have.status(200)
                     res.body.should.be.a('object')
                     res.body.should.have.property('data')
+                    res.body.should.have
+                        .property('data')
+                        .to.have.length.of.at.most(limit)
                     done()
                 })
         })
     })
 
     describe('/GET pet/:id', () => {
-        it('it should Get pets using id', (done) => {
+        it('should Get pets using id', (done) => {
             const id = 2
             chai.request(app)
                 .get('/pets/' + id)
@@ -35,10 +38,9 @@ describe('Pets', () => {
                     res.should.have.status(200)
                     res.body.should.be.a('object')
                     res.body.should.have.property('data')
-                    res.body.should.have.deep.nested.property('data.name')
-                    res.body.should.have.deep.nested.property('data.breed')
-                    res.body.should.have.deep.nested.property('data.type')
-
+                    res.body.should.have.deep.nested
+                        .property('data.id')
+                        .equal(id)
                     done()
                 })
         })
@@ -48,7 +50,7 @@ describe('Pets', () => {
      * Test the /POST route
      */
     describe('/POST pets', () => {
-        it('it should validate and post the pet info', (done) => {
+        it('should validate and post the pet info', (done) => {
             const pet = {
                 name: ' john',
                 breed: 'Bull',
@@ -63,6 +65,9 @@ describe('Pets', () => {
                     res.should.have.status(200)
                     res.body.should.be.a('object')
                     res.body.should.have.property('data')
+                    res.body.should.have
+                        .property('data')
+                        .to.deep.include.all.keys(pet)
                     res.body.should.have.property('message')
                     done()
                 })
