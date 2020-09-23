@@ -10,7 +10,9 @@ exports.showAll = (req, res) => {
                 error:
                     err.message || 'Some error occurred while retrieving data.',
             })
-        res.send({ data: data })
+        else {
+            res.send({ data: data })
+        }
     })
 }
 
@@ -46,12 +48,12 @@ exports.add = (req, res) => {
                 data: null,
                 error: err.message || 'An error occurred while adding data',
             })
+        } else {
+            res.send({
+                data: data,
+                message: 'Pet created',
+            })
         }
-
-        res.send({
-            data: data,
-            message: 'Pet created',
-        })
     })
 }
 
@@ -108,6 +110,7 @@ exports.delete = (req, res) => {
     })
 }
 
+//validate form input
 exports.validate = (method) => {
     switch (method) {
         case 'update':

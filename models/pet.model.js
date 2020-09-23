@@ -100,6 +100,17 @@ class Pet {
         })
     }
 
+    static countPets(result) {
+        sql.query('SELECT COUNT(*) AS total FROM pets', (err, res) => {
+            if (err) {
+                result(null, err)
+                return
+            }
+
+            result(null, res)
+        })
+    }
+
     //Verify if name is unique
     static isNameInUse(name) {
         return new Promise((resolve, reject) => {
