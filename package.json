@@ -1,25 +1,28 @@
 {
-  "name": "pet-shelter",
-  "version": "1.0.0",
-  "description": "An API to manage datastores of Pets",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "Segun Adeleye",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-validator": "^6.6.1",
-    "mysql": "^2.18.1"
-  },
-  "engines": {
-    "node": "12.18.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+    "name": "pet-shelter",
+    "version": "1.0.0",
+    "description": "An API to manage datastores of Pets",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --reporter spec",
+        "start": "nodemon index.js"
+    },
+    "author": "Segun Adeleye",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "chai-http": "^4.3.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-validator": "^6.6.1",
+        "mysql": "^2.18.1"
+    },
+    "engines": {
+        "node": "12.18.2"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.1.3",
+        "nodemon": "^2.0.4"
+    }
 }
