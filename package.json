@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "mocha --reporter spec",
-        "start": "nodemon index.js"
+        "start": "node index.js"
     },
     "author": "Segun Adeleye",
     "license": "MIT",
